@@ -1,0 +1,12 @@
+---
+title: "Publications"
+format:
+  html:
+    toc: true
+bibliography: publications.bib
+nocite: |
+  @*
+---
+
+::: {#refs}
+:::

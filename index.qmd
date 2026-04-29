@@ -1,0 +1,16 @@
+---
+title: "Benedikt Schmid"
+subtitle: "Anesthesiologist | Researcher | POCUS aficionado"
+image: /images/portrait_bs-02.jpeg
+about: # https://quarto.org/docs/websites/website-about.html
+  template: jolla
+  links:
+    - text: "{{< iconify simple-icons bluesky >}} Bluesky"
+      href: https://bsky.app/profile/pragmaticfool.bsky.social
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/benedikt-schmid-7314a6126/
+suppress-bibliography: true
+---
+
+more content following soon...

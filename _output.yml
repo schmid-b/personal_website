@@ -1,0 +1,6 @@
+author: Benedikt Schmid
+date: '`r format(Sys.Date())`'
+title: Untitled
+output: html_document
+bibliography: export1.bib
+
