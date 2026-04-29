@@ -1,7 +1,7 @@
 ---
 title: "Benedikt Schmid"
 subtitle: "Anesthesiologist | Researcher | POCUS aficionado"
-image: /images/portrait_bs-02.jpeg
+image: images/portrait_bs-02.jpeg
 about: # https://quarto.org/docs/websites/website-about.html
   template: jolla
   links:
