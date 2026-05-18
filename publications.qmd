@@ -3,10 +3,30 @@ title: "Publications"
 format:
   html:
     toc: true
-bibliography: publications.bib
-nocite: |
-  @*
 ---
 
-::: {#refs}
-:::
+```{r}
+#| echo: false
+#| output: false
+
+
+library(here)
+library(tidyverse)
+
+```
+
+```{r}
+#| echo: false
+#| results: asis
+
+readRDS(here("source", "publication_list.rds")) |>
+  mutate(AF = str_replace(AF, "Benedikt Schmid", "<span style='color: #0073e6;'>Benedikt Schmid</span>")) |>
+  glue::glue_data(
+    "1. {AF}<br>",
+    "**{TI}**<br> *{SO}* ({PY_IS}). ",
+    "DOI: <a href='https://doi.org/{DI}' target='_blank'>{DI}</a>. ",
+    "PMID: {PMID}.<br>"
+  ) |>
+  paste(collapse = "\n") |>
+  knitr::asis_output()
+```
