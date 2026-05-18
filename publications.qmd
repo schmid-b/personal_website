@@ -25,7 +25,8 @@ readRDS(here("source", "publication_list.rds")) |>
     "1. {AF}<br>",
     "**{TI}**<br> *{SO}* ({PY_IS}). ",
     "DOI: <a href='https://doi.org/{DI}' target='_blank'>{DI}</a>. ",
-    "PMID: {PMID}.<br>"
+    "PMID: {PMID}.<p>",
+    ""
   ) |>
   paste(collapse = "\n") |>
   knitr::asis_output()
