@@ -15,11 +15,31 @@ library(tidyverse)
 
 ```
 
+## my own work
 ```{r}
 #| echo: false
 #| results: asis
 
-readRDS(here("source", "publication_list.rds")) |>
+readRDS(here("source", "publication_list_firstlast.rds")) |>
+  mutate(AF = str_replace(AF, "Benedikt Schmid", "<span style='color: #0073e6;'>Benedikt Schmid</span>")) |>
+  glue::glue_data(
+    "1. {AF}<br>",
+    "**{TI}**<br> *{SO}* ({PY_IS}). ",
+    "DOI: <a href='https://doi.org/{DI}' target='_blank'>{DI}</a>. ",
+    "PMID: {PMID}.<p>",
+    ""
+  ) |>
+  paste(collapse = "\n") |>
+  knitr::asis_output()
+```
+
+## contributing to the work of others
+
+```{r}
+#| echo: false
+#| results: asis
+
+readRDS(here("source", "publication_list_all.rds")) |>
   mutate(AF = str_replace(AF, "Benedikt Schmid", "<span style='color: #0073e6;'>Benedikt Schmid</span>")) |>
   glue::glue_data(
     "1. {AF}<br>",
