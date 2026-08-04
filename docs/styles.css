@@ -1,1 +1,73 @@
-/* css styles */
+/* Global Styles */
+body {
+  background-color: #fdfdfd;
+  color: #2d3436;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Research Highlights Section */
+#research-highlights {
+  margin-top: 2em;
+}
+
+/* The Card Design (Digital Native Style) */
+.highlight-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #edf2f7;
+}
+
+/* Hover effect for interactivity */
+.highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+}
+
+/* Image handling within the card */
+.highlight-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.2em;
+}
+
+/* Typography inside the card */
+.highlight-card strong {
+  display: block;
+  font-size: 1.15em;
+  line-height: 1.3;
+  margin-bottom: 0.75em;
+  color: #2d3436;
+}
+
+.highlight-card p, 
+.highlight-card div {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #636e72;
+  margin-bottom: 1.2em;
+  flex-grow: 1; /* This pushes the link to the bottom of the card */
+}
+
+/* Link styling */
+.highlight-card a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: #3e5c76; /* Professional Slate Blue */
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+  margin-top: auto; /* Ensures the link stays at the bottom of the card */
+}
+
+.highlight-card a:hover {
+  color: #5a7d9a; /* Lighter Slate Blue on hover */
+  text-decoration: underline;
+}
